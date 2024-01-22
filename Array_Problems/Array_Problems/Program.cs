@@ -11,11 +11,19 @@ namespace Array_Problems
         static void Main(string[] args)
         {
             List<int> list = new List<int>() {1,2,3,1,2,3,7,5,3,7,5,0,6,3,4 };
+            SortedDictionary<int,int> sort = new SortedDictionary<int,int>();
+            foreach (int i in list)
+            {
+                if (sort.ContainsKey(i)) 
+                    sort[i]++;
+                else 
+                    sort[i] = 1;
+            }
             list=list.Distinct().ToList();
             list.Sort();
             foreach (int i in list)
             {
-                Console.WriteLine($"{i}");
+                Console.WriteLine($"{i}:{sort[i]}");
             }
         }
     }
