@@ -10,15 +10,16 @@ namespace Array_Problems
     {
         static void Main(string[] args)
         {
-            List<int> list = new List<int>() {12,1,30,40,23,90,25,78,9};
-            foreach (int i in list)
+            Console.WriteLine("Enter a Number to Print the pattern");
+            int n = Convert.ToInt32(Console.ReadLine());
+            for (int i = n-1; i >= 0; i--)
             {
-                Console.Write($"{i} ");
+                for (int j = i; j >=0; j--)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
             }
-            list.Sort();
-            Console.WriteLine();
-            Console.WriteLine($"Minimum Element : {list[0]}");
-            Console.WriteLine($"Maximum Element : {list[list.Count - 1]}");
         }
     }
 }
