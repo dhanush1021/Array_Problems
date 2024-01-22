@@ -10,12 +10,14 @@ namespace Array_Problems
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter a string");
-            string str = Console.ReadLine();
-            string[] list = str.Split(' ');
-            Array.Reverse(list);
-            string strrev = string.Join(" ", list);
-            Console.WriteLine(strrev);
+            int m = 678736;
+            int sum = 0;
+            while(m > 0)
+            {
+                sum += m % 10;
+                m /= 10;
+            }
+            Console.WriteLine(sum);
         }
     }
 }
