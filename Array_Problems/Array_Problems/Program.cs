@@ -10,21 +10,15 @@ namespace Array_Problems
     {
         static void Main(string[] args)
         {
-            List<int> list = new List<int>() {1,2,3,1,2,3,7,5,3,7,5,0,6,3,4 };
-            SortedDictionary<int,int> sort = new SortedDictionary<int,int>();
+            List<int> list = new List<int>() {12,1,30,40,23,90,25,78,9};
             foreach (int i in list)
             {
-                if (sort.ContainsKey(i)) 
-                    sort[i]++;
-                else 
-                    sort[i] = 1;
+                Console.Write($"{i} ");
             }
-            list=list.Distinct().ToList();
             list.Sort();
-            foreach (int i in list)
-            {
-                Console.WriteLine($"{i}:{sort[i]}");
-            }
+            Console.WriteLine();
+            Console.WriteLine($"Minimum Element : {list[0]}");
+            Console.WriteLine($"Maximum Element : {list[list.Count - 1]}");
         }
     }
 }
